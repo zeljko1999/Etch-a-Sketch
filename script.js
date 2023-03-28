@@ -14,10 +14,13 @@ function createGrid(x,y){
             }
     }
 }
-
-const hover = document.querySelectorAll("div.row","div.column");
-
-
-
-
 createGrid(16,16);
+let inputs = document.getElementsByClassName("column");
+for(let i=0; i <inputs.length ; i++)
+    inputs[i].addEventListener("mouseover", function() {
+        inputs[i].classList.add("change-color");
+    })
+
+
+
+
